@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+  background-color: #0a0a0a;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+/* ===== Header ===== */
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(14px);
+  background: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  font-weight: 900;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 1px;
+}
+
+/* ===== Navigation ===== */
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.site-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-nav ul li a {
+  text-decoration: none;
+  color: #eee;
+  font-weight: 600;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.site-nav ul li a:hover,
+.site-nav ul li a.active {
+  color: #FFD700;
+}
+.site-nav ul li a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, #FFD700, #a67c00);
+}
+
+/* CTA Buttons */
+.btn-primary {
+  background: linear-gradient(135deg, #a67c00, #FFD700);
+  color: #111;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+}
+.btn-primary:hover {
+  background: linear-gradient(135deg, #FFD700, #a67c00);
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.6);
+  transform: translateY(-2px);
+}
+.header-cta { display: inline-block; }
+.mobile-cta { display: none; }
+
+/* HERO */
+.about-hero {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("image/res.jpg") center/cover no-repeat;
+  text-align: center;
+  margin-bottom: 60px;
+  
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+  animation: fadeUp 1.2s ease both;
+}
+.about-hero h1 {
+  font-size: 10vh;
+  font-weight: 900;
+  color: #a29200;
+  text-shadow: 0 5px 20px rgba(103, 103, 103, 0.7);
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6));
+}
+
+
+/* ABOUT CONTENT */
+.about-content {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 80px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.about-text {
+  flex: 1 1 400px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ccc;
+}
+.about-text h2 {
+  font-size: 2.2rem;
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+.about-image {
+  flex: 1 1 300px;
+  text-align: center;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 2px solid #d4af37;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+}
+.about-image img {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+}
+
+/* PHILOSOPHY */
+.philosophy {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.philosophy h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #d4af37;
+  margin-bottom: 40px;
+}
+.philosophy-items {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+.philosophy-item {
+  max-width: 280px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+.philosophy-item:hover {
+  transform: translateY(-8px);
+}
+
+.philosophy-item h3 {
+  color: #d4af37;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+.philosophy-item p {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* FOOTER */
+footer {
+  background: #0b0b0b;
+  color: #ccc;
+  padding: 70px 0 30px;
+  margin-top: auto;
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-section h4 {
+  color: #FFD700;
+  font-weight: 700;
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-section p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #aaa;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-section ul li {
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+.footer-section ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+}
+.footer-section ul li a:hover {
+  color: #FFD700;
+  padding-left: 4px;
+}
+
+.footer-section.contact ul li,
+.footer-section.hours p {
+  color: #aaa;
+  font-size: 0.95rem;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 50px;
+  color: #666;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 18px;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+}
+.footer-bottom p {
+  margin: 0;
+}
+
+/* ===== Hamburger ===== */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hamburger .bar {
+  width: 26px;
+  height: 3px;
+  background-color: #FFD700;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.nav-toggle.active .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.nav-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+.slide-in-left {
+  animation: slideInLeft 1.2s ease;
+}
+.slide-in-right {
+  animation: slideInRight 1.2s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 900px) {
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: rgba(15, 15, 15, 0.98);
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .site-nav.open {
+    max-height: 400px; /* Enough for dropdown */
+    opacity: 1;
+    transform: translateY(0);
+    padding: 20px 0;
+  }
+
+  .site-nav ul {
+    flex-direction: column;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .site-nav ul li a {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #eee;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .site-nav ul li a:hover,
+  .site-nav ul li a.active {
+    color: #FFD700;
+  }
+
+  .header-cta { display: none; }
+  .mobile-cta {
+    display: block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    border-radius: 30px;
+  }
+
+  .nav-toggle { display: block; }
+}
+
+@media (max-width: 382px) {
+    .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: #FFD700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 1px;
+}
+.about-hero h1 {
+  font-size: 7vh;
+  font-weight: 900;
+  color: #a29200;
+  text-shadow: 0 5px 20px rgba(103, 103, 103, 0.7);
+}
+
+  /* تصحيح الكلاس */
+  .contact-content {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+    gap: 16px;
+  }
+
+  .form-section, .contact-info {
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+
+  footer {
+    padding: 20px 10px;
+  }
+  .footer-container {
+    gap: 16px;
+  }
+  .footer-section h4 {
+    margin-bottom: 10px;
+  }
+  .footer-bottom {
+    margin-top: 15px;
+  }
+   }

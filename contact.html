@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elysian Fields | Contact Us</title>
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="container header-container">
+      <div class="logo">
+        <span class="icon">✦</span> Elysian Fields
+      </div>
+
+      <!-- Hamburger -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </span>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="site-nav" id="siteNav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html" class="active">Contact Us</a></li>
+        </ul>
+        <!-- CTA (mobile only) -->
+        <a href="contact.html" class="btn-primary mobile-cta">Book a Table</a>
+      </nav>
+
+      <!-- CTA (desktop only) -->
+      <a href="contact.html" class="btn-primary header-cta">Book a Table</a>
+    </div>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+    <main>
+    <!-- Hero -->
+    <section class="contact-hero container">
+      <h1>Contact & Reservations</h1>
+      <p>We look forward to welcoming you to a luxury dining experience.</p>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content container">
+      <!-- Form -->
+      <div class="form-section card">
+        <h2>Book Your Table</h2>
+        <form id="reservation-form" autocomplete="off">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Your Name" required />
+
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" placeholder="Your Phone" required />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+          <label for="date">Preferred Date</label>
+          <input type="date" id="date" name="date" required />
+
+          <button type="submit" class="btn-submit">SEND REQUEST</button>
+        </form>
+        <p id="form-message" role="alert" aria-live="polite"></p>
+      </div>
+
+      <!-- Info -->
+      <div class="contact-info card">
+        <h2>Get In Touch</h2>
+        <ul>
+          <li>📞 +1 (234) 567-890</li>
+          <li>✉ reservations@elysianfields.com</li>
+          <li>💬 WhatsApp Us</li>
+          <li>📍 123 Luxury Lane, Metropolis, 10101</li>
+        </ul>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.918498956869!2d-73.98715578459462!3d40.748817779327095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259af18fc6241%3A0x6e5f1e5e4b4db4f7!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1687280589852!5m2!1sen!2sus"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Elysian Fields Location"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+ <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h4>Elysian Fields</h4>
+        <p>An unforgettable culinary journey awaits. Experience luxury dining in the heart of the city.</p>
+      </div>
+      <div class="footer-section links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Contact & Reservations</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact">
+        <h4>Contact</h4>
+        <ul>
+          <li>📞 +1 (234) 567-890</li>
+          <li>✉ reservations@elysianfields.com</li>
+          <li>💬 WhatsApp</li>
+          <li>📍 123 Luxury Lane, Metropolis, 10101</li>
+        </ul>
+      </div>
+      <div class="footer-section hours">
+        <h4>Hours</h4>
+        <p>Dinner: Tue - Sun | 5:00 PM - 11:00 PM</p>
+        <p>Café: Tue - Sun | 4:00 PM - 12:00 AM</p>
+        <p>Monday: Closed</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Elysian Fields. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ===== JS ===== -->
+  <script src="contact.js"></script>
+</body>
+</html>
