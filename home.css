@@ -108,7 +108,7 @@ header {
 
 /* Hero */
 .hero {
-  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  background: url("https://i.pinimg.com/736x/d3/b7/af/d3b7af07f3fdc19b08623fb914e836aa.jpg") no-repeat center center/cover;
   height: 100vh;
   display: flex;
   justify-content: center;
